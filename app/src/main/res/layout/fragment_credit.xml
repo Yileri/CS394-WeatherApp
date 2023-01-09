@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3C4048">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/oznur"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/oznurp"
+            />
+        <TextView
+            android:id="@+id/akaOznur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/oznur"
+            app:layout_constraintTop_toBottomOf="@id/oznur"
+            android:text="Öznur Timur   AKA: Black Hole   MOTTO: You are either a 0 or -1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/yigit"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/oznur"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/yigitp"
+            />
+        <TextView
+            android:id="@+id/akaYigit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/yigit"
+            app:layout_constraintTop_toBottomOf="@id/yigit"
+            android:text="Yiğit İleri             AKA: Androyeet
+         MOTTO: Why not ?"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/resat"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/yigit"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/resatp"
+            />
+        <TextView
+            android:id="@+id/akaResat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/resat"
+            app:layout_constraintTop_toBottomOf="@id/resat"
+            android:text="Reşat Eren Bulut        AKA:ResoReso
+         MOTTO: I gotchu!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/ekin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/resat"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ekinp"
+            />
+        <TextView
+            android:id="@+id/akaEkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/ekin"
+            app:layout_constraintTop_toBottomOf="@id/ekin"
+            android:text="Ekin Gündoğdu
+      AKA: UNLUCKY          MOTTO: Life is hard"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
