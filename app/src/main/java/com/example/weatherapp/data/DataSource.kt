@@ -54,11 +54,20 @@ class DataSource(val context: Context) {
 
         var cities = mutableListOf<City>()
 
-        val city = City(nameList[0], conditionList[0], tempList[0],
-        highTempList[0], lowTempList[0], sunriseList[0], sunsetList[0],
-        humidityList[0], windList[0])
-
-        cities.add(city)
+       for (i in 0..2) {
+           val city = City(
+               nameList[i],
+               conditionList[i],
+               tempList[i],
+               highTempList[i],
+               lowTempList[i],
+               sunriseList[i],
+               sunsetList[i],
+               humidityList[i],
+               windList[i]
+           )
+           cities.add(city)
+       }
 
         return cities
     }

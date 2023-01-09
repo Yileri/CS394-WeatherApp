@@ -1,25 +1,22 @@
 package com.example.weatherapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.databinding.DataBindingUtil
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.BindingAdapter
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.weatherapp.adapter.ItemAdapter
 import com.example.weatherapp.data.DataSource
 import com.google.android.material.navigation.NavigationView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         val rv: RecyclerView = findViewById(R.id.recyclerView)
         rv.adapter = ItemAdapter(cities)
         rv.setHasFixedSize(true)
+
+
 
         drawerLayout = findViewById(R.id.main_layout)
         val navView: NavigationView = findViewById(R.id.navView)
@@ -70,4 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
+
+
+
 }
