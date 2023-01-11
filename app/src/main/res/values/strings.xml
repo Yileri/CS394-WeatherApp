@@ -3,7 +3,7 @@
     <string-array name="name_array">
         <item>Istanbul</item>
         <item>Ankara</item>
-        <item>İzmir</item>
+        <item>Izmir</item>
 
     </string-array>
     <string-array name="condition_array">

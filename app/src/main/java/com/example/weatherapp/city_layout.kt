@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.weatherapp.adapter.ImageLoading
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,6 +26,8 @@ class city_layout : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var imageLoading: ImageLoading
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -38,8 +41,30 @@ class city_layout : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val view=
         return inflater.inflate(R.layout.fragment_city_layout, container, false)
+        imageLoading= ImageLoading()
+        return view
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val cityname = arguments?.getString("name") ?: ""
+        when (cityname) {
+            "Istanbul" -> imageLoading.cityImageUrl.value = imageLoading.cityIstanbulImageUrl
+            "Ankara" -> imageLoading.cityImageUrl.value = imageLoading.cityAnkaraImageUrl
+             "Izmir"-> imageLoading.cityImageUrl.value = imageLoading.cityIzmirImageUrl
+        }
+    }
+
+
+
+
+
+
+
+
 
     companion object {
         /**
@@ -60,4 +85,7 @@ class city_layout : Fragment() {
                 }
             }
     }
+
+
+
 }
