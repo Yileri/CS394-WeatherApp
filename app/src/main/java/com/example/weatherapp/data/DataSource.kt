@@ -41,6 +41,7 @@ class DataSource(val context: Context) {
         return context.resources.getStringArray(R.array.wind_array)
     }
 
+
     fun loadCities(): List<City> {
         val nameList = getCitysName()
         val conditionList = getCitysCondition()
