@@ -3,17 +3,19 @@ package com.example.weatherapp
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.BindingAdapter
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.weatherapp.adapter.ItemAdapter
+import com.example.weatherapp.adapter.*
 import com.example.weatherapp.data.DataSource
 import com.google.android.material.navigation.NavigationView
 
@@ -60,6 +62,9 @@ class MainActivity : AppCompatActivity() {
 
             true
         }
+
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -72,4 +77,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-}
+
+    }
+
+
