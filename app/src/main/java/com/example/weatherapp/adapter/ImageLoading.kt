@@ -21,4 +21,6 @@ class ImageLoading {
     val cityAnkaraImageUrl = "https://upload.wikimedia.org/wikipedia/commons/c/ce/An%C4%B1tkabir%2C_Ankara.jpg"
     val cityIzmirImageUrl = "https://www.shutterstock.com/image-photo/izmir-clock-tower-famous-became-260nw-716723134.jpg"
 
+
+
 }

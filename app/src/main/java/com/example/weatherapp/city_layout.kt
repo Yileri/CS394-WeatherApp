@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.weatherapp.adapter.ImageLoading
+import com.example.weatherapp.model.City
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,21 +38,9 @@ class city_layout : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view=
-        return inflater.inflate(R.layout.fragment_city_layout, container, false)
+        val view= inflater.inflate(R.layout.fragment_city_layout, container, false)
         imageLoading= ImageLoading()
         return view
-    }
-
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val cityname = arguments?.getString("name") ?: ""
-        when (cityname) {
-            "Istanbul" -> imageLoading.cityImageUrl.value = imageLoading.cityIstanbulImageUrl
-            "Ankara" -> imageLoading.cityImageUrl.value = imageLoading.cityAnkaraImageUrl
-             "Izmir"-> imageLoading.cityImageUrl.value = imageLoading.cityIzmirImageUrl
-        }
     }
 
 
