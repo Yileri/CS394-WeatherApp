@@ -37,19 +37,6 @@
                 android:layout_height="match_parent"
                 android:visibility="visible">
 
-
-                <ImageView
-                    android:id="@+id/id_weatherIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_sunny"
-                    app:layout_constraintBottom_toTopOf="@id/id_mainInfo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/id_locationContainer"
-                    app:layout_constraintVertical_bias="0.49" />
-
                 <LinearLayout
                     android:id="@+id/id_locationContainer"
                     android:layout_width="364dp"
@@ -85,6 +72,11 @@
                     app:layout_constraintVertical_bias="0.58"
                     tools:layout_editor_absoluteX="0dp">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
                     <TextView
                         android:id="@+id/conditionView"
                         android:layout_width="wrap_content"
@@ -92,10 +84,23 @@
                         android:layout_gravity="center"
                         android:text="condition"
                         android:textColor="#EEFFFFFF"
-                        android:textSize="18sp">
+                        android:textSize="18sp"/>
 
-                    </TextView>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"/>
 
+                        <ImageView
+                            android:id="@+id/id_weatherIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="57dp"
+                            android:src="@drawable/ic_sunny"
+                            app:layout_constraintBottom_toTopOf="@id/id_mainInfo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/id_locationContainer" />
+
+                </LinearLayout>
                     <TextView
                         android:id="@+id/tempView"
                         android:layout_width="wrap_content"
@@ -110,10 +115,6 @@
 
 
                     </LinearLayout>
-
-
-
-
 
 
                 <LinearLayout
@@ -144,12 +145,13 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="146dp"
-                    android:layout_height="175dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="108dp"
-                    tools:srcCompat="@tools:sample/avatars"
-                    tools:ignore="MissingConstraints" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/id_mainInfo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_locationContainer"
+                    tools:srcCompat="@tools:sample/avatars" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
