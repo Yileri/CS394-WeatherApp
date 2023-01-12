@@ -15,9 +15,13 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.weatherapp.Retrofit.ApiInterface
 import com.example.weatherapp.adapter.*
 import com.example.weatherapp.data.DataSource
+import com.example.weatherapp.model.CityX
 import com.google.android.material.navigation.NavigationView
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 class MainActivity : AppCompatActivity() {
@@ -75,6 +79,17 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+
+    fun cityApi():CityX{
+val retrofit:Retrofit=Retrofit.Builder()
+        .baseUrl("https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=001f4abe47262aa2424f9aed04fa56c1")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+
+        val api:ApiInterface=retrofit.create(ApiInterface::class.java)
+        val city =api.getLondon()
+       return city
+    }
 
 
 
