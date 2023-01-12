@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#3C4048">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,6 +16,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/oznurp"
+            style="@style/TransparentBackground"
             />
         <TextView
             android:id="@+id/akaOznur"
@@ -27,8 +27,7 @@
             android:text="Öznur Timur   AKA: Black Hole   MOTTO: You are either a 0 or -1"
             android:textColor="@color/white"
             android:textStyle="bold"
-
-            />
+            style="@style/TransparentBackground" />
 
         <ImageView
             android:id="@+id/yigit"
@@ -38,7 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="50dp"
             android:src="@drawable/yigitp"
-            />
+            style="@style/TransparentBackground" />
         <TextView
             android:id="@+id/akaYigit"
             android:layout_width="match_parent"
@@ -49,7 +48,7 @@
          MOTTO: Why not ?"
             android:textColor="@color/white"
             android:textStyle="bold"
-            />
+            style="@style/TransparentBackground" />
         <ImageView
             android:id="@+id/resat"
             android:layout_width="100dp"
@@ -58,7 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="50dp"
             android:src="@drawable/resatp"
-            />
+            style="@style/TransparentBackground" />
         <TextView
             android:id="@+id/akaResat"
             android:layout_width="match_parent"
@@ -69,7 +68,7 @@
          MOTTO: I gotchu!"
             android:textColor="@color/white"
             android:textStyle="bold"
-            />
+            style="@style/TransparentBackground" />
         <ImageView
             android:id="@+id/ekin"
             android:layout_width="100dp"
@@ -78,7 +77,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="50dp"
             android:src="@drawable/ekinp"
-            />
+            style="@style/TransparentBackground" />
         <TextView
             android:id="@+id/akaEkin"
             android:layout_width="match_parent"
@@ -89,6 +88,6 @@
       AKA: UNLUCKY          MOTTO: Life is hard"
             android:textColor="@color/white"
             android:textStyle="bold"
-            />
+            style="@style/TransparentBackground" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -19,7 +19,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background"
             android:orientation="vertical"
             android:padding="25dp"
             tools:context=".MainActivity">
@@ -32,6 +31,7 @@
                 android:layout_marginEnd="15dp"
                 android:background="#3BF6F0F6"
                 android:orientation="vertical"
+                style="@style/TransparentBackground"
                 app:layout_constraintEnd_toStartOf="@+id/lowTemperatureLayout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -41,7 +41,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -55,7 +56,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_arrow_upward"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -72,7 +74,8 @@
                         android:gravity="center"
                         android:text="High"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -94,7 +97,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -104,7 +108,8 @@
                         android:gravity="center"
                         android:text="@{city.highTemp}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -122,14 +127,16 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/highTemperatureLayout"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TransparentBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -143,7 +150,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_arrow_downward"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -160,7 +168,8 @@
                         android:gravity="center"
                         android:text="Low"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -182,7 +191,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -192,7 +202,8 @@
                         android:gravity="center"
                         android:text="@{city.lowTemp}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -211,14 +222,16 @@
                 app:layout_constraintEnd_toStartOf="@+id/windLayout"
                 app:layout_constraintHorizontal_bias="0.53"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/highTemperatureLayout">
+                app:layout_constraintTop_toBottomOf="@+id/highTemperatureLayout"
+                style="@style/TransparentBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -232,7 +245,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/humidity"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -249,7 +263,8 @@
                         android:gravity="center"
                         android:text="Humidity"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -271,7 +286,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -281,7 +297,8 @@
                         android:gravity="center"
                         android:text="@{city.humidity}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -299,14 +316,16 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/humidityLayout"
-                app:layout_constraintTop_toBottomOf="@+id/lowTemperatureLayout">
+                app:layout_constraintTop_toBottomOf="@+id/lowTemperatureLayout"
+                style="@style/TransparentBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -320,7 +339,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/wind"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -337,7 +357,8 @@
                         android:gravity="center"
                         android:text="Wind"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -359,7 +380,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -369,7 +391,8 @@
                         android:gravity="center"
                         android:text="@{city.wind}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -387,14 +410,16 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toStartOf="@+id/sunsetLayout"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/humidityLayout">
+                app:layout_constraintTop_toBottomOf="@+id/humidityLayout"
+                style="@style/TransparentBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -408,7 +433,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/sunrise"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -425,7 +451,8 @@
                         android:gravity="center"
                         android:text="Sunrise"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -447,7 +474,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -457,7 +485,8 @@
                         android:gravity="center"
                         android:text="@{city.sunrise}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -475,14 +504,16 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/sunriseLayout"
-                app:layout_constraintTop_toBottomOf="@+id/windLayout">
+                app:layout_constraintTop_toBottomOf="@+id/windLayout"
+                style="@style/TransparentBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <Space
                         android:layout_width="10sp"
@@ -496,7 +527,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:src="@drawable/sunset"
-                        app:tint="#FFF">
+                        app:tint="#FFF"
+                        style="@style/TransparentBackground">
 
                     </ImageView>
 
@@ -513,7 +545,8 @@
                         android:gravity="center"
                         android:text="Sunset"
                         android:textSize="20sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
@@ -535,7 +568,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    style="@style/TransparentBackground">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -545,7 +579,8 @@
                         android:gravity="center"
                         android:text="@{city.sunset}"
                         android:textSize="45sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        style="@style/TransparentBackground">
 
                     </TextView>
 
