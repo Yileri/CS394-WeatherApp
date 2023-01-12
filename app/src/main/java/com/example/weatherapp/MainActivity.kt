@@ -83,8 +83,8 @@ class MainActivity : AppCompatActivity() {
     fun cityApi():CityX{
 val retrofit:Retrofit=Retrofit.Builder()
         .baseUrl("https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=001f4abe47262aa2424f9aed04fa56c1")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
         val api:ApiInterface=retrofit.create(ApiInterface::class.java)
         val city =api.getLondon()
