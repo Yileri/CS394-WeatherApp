@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">#F8B563</item>
@@ -19,7 +19,7 @@
     </style>
 
     <style name="Widget.WeatherApp.Toolbar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">?attr/colorSecondary</item>
+        <item name="android:background">#FF5722</item>
         <item name="android:theme">@style/Theme.WeatherApp</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>

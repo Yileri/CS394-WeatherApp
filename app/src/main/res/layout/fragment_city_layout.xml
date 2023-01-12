@@ -34,36 +34,13 @@
                 android:id="@+id/id_mainContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible">
-
-                <LinearLayout
-                    android:id="@+id/id_locationContainer"
-                    android:layout_width="364dp"
-                    android:layout_height="68dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    style="@style/TransparentBackground"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.024">
-
-                    <TextView
-                        android:id="@+id/nameView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="name"
-                        style="@style/TransparentBackground"
-                        android:textSize="30sp"
-                        android:textColor="#EEFFFFFF">
-
-                    </TextView>
-
-                </LinearLayout>
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="6dp">
 
                 <LinearLayout
                     android:id="@+id/id_mainInfo"
+                    style="@style/TransparentBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="-20dp"
@@ -71,56 +48,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.58"
-                    tools:layout_editor_absoluteX="0dp"
-                    style="@style/TransparentBackground">
+                    tools:layout_editor_absoluteX="0dp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        style="@style/TransparentBackground">
-                    <TextView
-                        android:id="@+id/conditionView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="condition"
                         style="@style/TransparentBackground"
-                        android:textColor="#EEFFFFFF"
-                        android:textSize="18sp"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/conditionView"
+                            style="@style/TransparentBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="condition"
+                            android:textColor="#EEFFFFFF"
+                            android:textSize="18sp" />
 
                         <Space
                             android:layout_width="10dp"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content" />
 
                         <ImageView
                             android:id="@+id/id_weatherIcon"
+                            style="@style/TransparentBackground"
                             android:layout_width="50dp"
                             android:layout_height="57dp"
                             android:src="@drawable/ic_sunny"
-                            style="@style/TransparentBackground"
                             app:layout_constraintBottom_toTopOf="@id/id_mainInfo"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/id_locationContainer" />
+                            app:layout_constraintStart_toStartOf="parent" />
 
-                </LinearLayout>
+                    </LinearLayout>
+
                     <TextView
                         android:id="@+id/tempView"
+                        style="@style/TransparentBackground"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:text="temp"
-                        style="@style/TransparentBackground"
                         android:textColor="#EEFFFFFF"
                         android:textSize="90sp">
 
                     </TextView>
 
 
-                    </LinearLayout>
+                </LinearLayout>
 
 
                 <LinearLayout
@@ -137,28 +114,49 @@
 
                     <TextView
                         android:id="@+id/detailView"
+                        style="@style/TransparentBackground"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="Details"
-                        style="@style/TransparentBackground"
-                        android:textSize="35sp"
-                        android:textColor="#EEFFFFFF">
+                        android:textColor="#EEFFFFFF"
+                        android:textSize="35sp">
 
                     </TextView>
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:cardCornerRadius="4dp"
                     app:layout_constraintBottom_toTopOf="@+id/id_mainInfo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/id_locationContainer"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nameView"
+                            style="@style/TransparentBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="name"
+                            android:textColor="#EEFFFFFF"
+                            android:textSize="30sp"
+                            android:layout_gravity="center">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
