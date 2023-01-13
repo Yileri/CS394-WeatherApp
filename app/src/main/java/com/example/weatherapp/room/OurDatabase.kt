@@ -3,9 +3,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.weatherapp.model.City
+import com.example.weatherapp.model.CityX
 
-@Database(entities = [City::class], version = 1)
+@Database(entities = [CityX::class], version = 1)
 abstract class OurDatabase :RoomDatabase(){
 
     abstract  fun cityDao(): CityDao
