@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity() {
 
     suspend fun writeToDatabase(){        //BURDA DATABASE EKLİYORUZ
     repository.AddTheCities()
-
     }
 
 
@@ -84,6 +83,7 @@ class MainActivity : AppCompatActivity() {
     suspend fun readFromDatabase():List<CityX>{   //BURDA DATABASEDEN ÇEKİYORUZ
 
         val dataList:List<CityX> =repository.getCities()
+
         return dataList
 }
 
