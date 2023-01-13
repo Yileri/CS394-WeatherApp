@@ -3,25 +3,17 @@ package com.example.weatherapp
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.BindingAdapter
-import androidx.databinding.DataBindingUtil.setContentView
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.weatherapp.Retrofit.ApiInterface
 import com.example.weatherapp.adapter.*
 import com.example.weatherapp.data.DataSource
 import com.example.weatherapp.model.CityX
+import com.example.weatherapp.repository.CityRepo
+import com.example.weatherapp.room.OurDatabase
 import com.google.android.material.navigation.NavigationView
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +21,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
-
+    lateinit var cityDB:OurDatabase
+    val repository=CityRepo(cityDB)
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -80,16 +74,18 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun cityApi():CityX{
-val retrofit:Retrofit=Retrofit.Builder()
-        .baseUrl("https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=001f4abe47262aa2424f9aed04fa56c1")
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+    suspend fun writeToDatabase(){        //BURDA DATABASE EKLİYORUZ
+    repository.AddTheCities()
 
-        val api:ApiInterface=retrofit.create(ApiInterface::class.java)
-        val city =api.getLondon()
-       return city
     }
+
+
+
+    suspend fun readFromDatabase():List<CityX>{   //BURDA DATABASEDEN ÇEKİYORUZ
+
+        val dataList:List<CityX> =repository.getCities()
+        return dataList
+}
 
 
 

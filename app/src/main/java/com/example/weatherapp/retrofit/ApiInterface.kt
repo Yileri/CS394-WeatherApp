@@ -1,5 +1,5 @@
 
-package com.example.weatherapp.Retrofit
+package com.example.weatherapp.retrofit
 
 import com.example.weatherapp.model.CityX
 import retrofit2.http.GET
@@ -22,5 +22,5 @@ interface ApiInterface {
     fun getAnkara():CityX
 
     @GET("data/2.5/weather?q=Izmır&units=metric&appid=001f4abe47262aa2424f9aed04fa56c1")
-    fun getIzmır():CityX
+    fun getIzmir():CityX
 }
