@@ -1,8 +1,12 @@
 package com.example.weatherapp.data
 
 import android.content.Context
+import com.example.weatherapp.MainActivity
 import com.example.weatherapp.R
-import com.example.weatherapp.model.City
+
+import com.example.weatherapp.model.CityX
+import com.example.weatherapp.repository.CityRepo
+import com.example.weatherapp.room.OurDatabase
 
 class DataSource(val context: Context) {
     fun getCitysName(): Array<String> {
@@ -45,8 +49,8 @@ class DataSource(val context: Context) {
         return context.resources.getStringArray(R.array.image_url)
     }
 
-
-    fun loadCities(): List<City> {
+   /*
+    fun loadCities(): List<CityX> {
         val nameList = getCitysName()
         val conditionList = getCitysCondition()
         val tempList = getCitysTemp()
@@ -58,10 +62,10 @@ class DataSource(val context: Context) {
         val windList = getCitysWind()
         val imageUrlList = getCitysImageUrl()
 
-        var cities = mutableListOf<City>()
+        var cities = mutableListOf<CityX>()
 
         for (i in 0..2) {
-            val city = City(
+            val city = CityX(
                 nameList[i],
                 conditionList[i],
                 tempList[i],
@@ -79,5 +83,5 @@ class DataSource(val context: Context) {
         return cities
     }
 
-
+*/
 }

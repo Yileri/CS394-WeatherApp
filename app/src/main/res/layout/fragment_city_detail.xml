@@ -7,7 +7,7 @@
     <data>
         <variable
             name="city"
-            type="com.example.weatherapp.model.City" />
+            type="com.example.weatherapp.model.CityX" />
 
     </data>
 
@@ -106,7 +106,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.highTemp}"
+                        android:text="@{String.valueOf(city.main.temp_max)}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">
@@ -200,7 +200,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.lowTemp}"
+                        android:text="@{String.valueOf(city.main.temp_min)}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">
@@ -295,7 +295,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.humidity}"
+                        android:text="@{city.main.humidity}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">
@@ -389,7 +389,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.wind}"
+                        android:text="@{String.valueOf(city.wind.speed)}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">
@@ -483,7 +483,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.sunrise}"
+                        android:text="@{String.valueOf(city.sys.sunrise)}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">
@@ -577,7 +577,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="sans-serif-thin"
                         android:gravity="center"
-                        android:text="@{city.sunset}"
+                        android:text="@{String.valueOf(city.sys.sunset)}"
                         android:textSize="45sp"
                         android:textColor="#EEFFFFFF"
                         style="@style/TransparentBackground">

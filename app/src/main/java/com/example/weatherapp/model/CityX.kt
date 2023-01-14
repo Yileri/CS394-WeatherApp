@@ -19,9 +19,10 @@ data class CityX(
     val sys: Sys,
     val timezone: Int,
     val visibility: Int,
-    val weather: List<Weather>,
-    val wind: Wind
-)
+    val weather: Weather,
+    val wind: Wind,
+    var imageUrl: String //Dikkat PATALAYABİLİR
+) : java.io.Serializable
 
 class CityXTypeConverter {
     @TypeConverter
@@ -80,13 +81,13 @@ class SysTypeConverter {
 }
 class WeatherListTypeConverter {
     @TypeConverter
-    fun fromRoomEntity(entity: List<Weather>): String {
+    fun fromRoomEntity(entity: Weather): String {
         return Gson().toJson(entity)
     }
 
     @TypeConverter
-    fun toRoomEntity(databaseValue: String): List<Weather> {
-        val listType = object : TypeToken<List<Weather>>() {}.type
+    fun toRoomEntity(databaseValue: String): Weather {
+        val listType = object : TypeToken<Weather>() {}.type
         return Gson().fromJson(databaseValue, listType)
     }
 }

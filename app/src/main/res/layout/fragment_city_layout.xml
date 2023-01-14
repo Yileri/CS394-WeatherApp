@@ -11,7 +11,7 @@
 
         <variable
             name="city"
-            type="com.example.weatherapp.model.City" />
+            type="com.example.weatherapp.model.CityX" />
     </data>
 
 

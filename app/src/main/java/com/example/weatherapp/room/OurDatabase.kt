@@ -19,7 +19,7 @@ abstract class OurDatabase :RoomDatabase(){
             if(INSTANCE ==null){
                 synchronized(this){
                     INSTANCE = Room.databaseBuilder(
-                        context, OurDatabase::class.java,"citiesDB")
+                        context.applicationContext, OurDatabase::class.java,"citiesDB")
                         .build()
                 }
             }

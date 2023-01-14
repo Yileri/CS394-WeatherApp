@@ -1,3 +1,4 @@
+/*
 package com.example.weatherapp.model
 
 import androidx.room.ColumnInfo
@@ -15,3 +16,4 @@ data class City(@PrimaryKey val name: String,
                 @ColumnInfo(name="humidity") val humidity: String,
                 @ColumnInfo(name="wind")val wind: String,
                 var imageUrl: String)  : java.io.Serializable
+*/

@@ -9,12 +9,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapp.CityDetailActivity
 import com.example.weatherapp.R
-import com.example.weatherapp.model.City
+
+import com.example.weatherapp.model.CityX
 import com.squareup.picasso.Picasso
 
 
 
-class ItemAdapter(val dataset: List<City>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter(val dataset: List<CityX>): RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val nameView = view.findViewById<TextView>(R.id.nameView)
@@ -24,7 +25,7 @@ class ItemAdapter(val dataset: List<City>): RecyclerView.Adapter<ItemAdapter.Ite
         val images=view.findViewById<ImageView>(R.id.city_image)
 
 
-        lateinit var city: City
+        lateinit var city: CityX
 
         init {
             details.setOnClickListener {
@@ -35,16 +36,16 @@ class ItemAdapter(val dataset: List<City>): RecyclerView.Adapter<ItemAdapter.Ite
         }
 
         companion object {
-            private val CITY_KEY = "CITY"
+            private val CITY_KEY = "CITYX"
         }
 
-        fun bind(city: City) {
+        fun bind(city: CityX) {
             this.city = city
             nameView.text = city.name
-            conditionView.text = city.condition
+            conditionView.text = city.weather.description// patlayabilir
 
 
-            tempView.text = city.temp
+            tempView.text = city.main.temp.toString()
             Picasso.get().load(city.imageUrl).into(images);
         }
     }
