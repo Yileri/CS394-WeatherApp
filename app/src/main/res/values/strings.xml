@@ -4,13 +4,15 @@
         <item>Istanbul</item>
         <item>Ankara</item>
         <item>Izmir</item>
-
     </string-array>
+
+
     <string-array name="condition_array">
         <item>Clear Sky</item>
         <item>Clear Sky</item>
         <item>Clear Sky</item>
     </string-array>
+
     <string-array name="temp_array">
         <item>30°C</item>
         <item>31°C</item>
@@ -22,18 +24,21 @@
         <item>33°C</item>
         <item>31°C</item>
     </string-array>
+
     <string-array name="lowtemp_array">
         <item>23°C</item>
         <item>20°C</item>
         <item>22°C</item>
 
     </string-array>
+
     <string-array name="sunrise_array">
         <item>6:45</item>
         <item>6:39</item>
         <item>5:49</item>
 
     </string-array>
+
     <string-array name="sunset_array">
         <item>18:30</item>
         <item>18:40</item>
@@ -55,10 +60,12 @@
     </string-array>
 
 
+    <string-array name="image_url">
+        <item>"https://www.gruppal.com/blog/public/assets/img/vapurlar-1573135623557.jpg"</item>
+        <item>"https://upload.wikimedia.org/wikipedia/commons/c/ce/An%C4%B1tkabir%2C_Ankara.jpg"</item>
+        <item>"https://www.shutterstock.com/image-photo/izmir-clock-tower-famous-became-260nw-716723134.jpg"</item>
 
-
-
-
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

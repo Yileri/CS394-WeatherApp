@@ -41,6 +41,10 @@ class DataSource(val context: Context) {
         return context.resources.getStringArray(R.array.wind_array)
     }
 
+    fun getCitysImageUrl(): Array<String> {
+        return context.resources.getStringArray(R.array.image_url)
+    }
+
 
     fun loadCities(): List<City> {
         val nameList = getCitysName()
@@ -52,24 +56,28 @@ class DataSource(val context: Context) {
         val sunsetList = getCitysSunset()
         val humidityList = getCitysHumidity()
         val windList = getCitysWind()
+        val imageUrlList = getCitysImageUrl()
 
         var cities = mutableListOf<City>()
 
-       for (i in 0..2) {
-           val city = City(
-               nameList[i],
-               conditionList[i],
-               tempList[i],
-               highTempList[i],
-               lowTempList[i],
-               sunriseList[i],
-               sunsetList[i],
-               humidityList[i],
-               windList[i]
-           )
-           cities.add(city)
-       }
+        for (i in 0..2) {
+            val city = City(
+                nameList[i],
+                conditionList[i],
+                tempList[i],
+                highTempList[i],
+                lowTempList[i],
+                sunriseList[i],
+                sunsetList[i],
+                humidityList[i],
+                windList[i],
+                imageUrlList[i]
+            )
+            cities.add(city)
+        }
 
         return cities
     }
+
+
 }

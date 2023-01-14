@@ -8,7 +8,13 @@
         <variable
             name="imageLoading"
             type="com.example.weatherapp.adapter.ImageLoading" />
+
+        <variable
+            name="city"
+            type="com.example.weatherapp.model.City" />
     </data>
+
+
 
 
 <androidx.drawerlayout.widget.DrawerLayout
@@ -137,8 +143,10 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
+                        android:id="@+id/city_image"
                         android:layout_width="match_parent"
-                        android:layout_height="210dp" />
+                        android:layout_height="210dp"
+                        app:imageUrl="@{imageLoading.cityImageUrl}"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"

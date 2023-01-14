@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.WeatherApp" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">#F8B563</item>
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/purple_variant</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-         <item name="colorSecondary">#673AB7</item>
-        <item name="colorSecondaryVariant">#9270CD</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/orange_variant</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/orange</item>
@@ -16,11 +16,5 @@
         <item name="colorSurface">@color/purple_500</item>
         <item name="colorOnSurface">@color/white</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-    </style>
-
-    <style name="Widget.WeatherApp.Toolbar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">#FF5722</item>
-        <item name="android:theme">@style/Theme.WeatherApp</item>
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 </resources>

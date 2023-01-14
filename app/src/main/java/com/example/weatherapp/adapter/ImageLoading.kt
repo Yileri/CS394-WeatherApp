@@ -3,6 +3,7 @@ package com.example.weatherapp.adapter
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
+import com.example.weatherapp.model.City
 import com.squareup.picasso.Picasso
 
 class ImageLoading {
@@ -22,5 +23,12 @@ class ImageLoading {
     val cityIzmirImageUrl = "https://www.shutterstock.com/image-photo/izmir-clock-tower-famous-became-260nw-716723134.jpg"
 
 
+    fun updateCity(city: City) {
+        when (city.name) {
+            "Istanbul" -> city.imageUrl = cityIstanbulImageUrl
+            "Ankara" -> city.imageUrl = cityAnkaraImageUrl
+            "Izmir" -> city.imageUrl = cityIzmirImageUrl
+        }
+    }
 
 }

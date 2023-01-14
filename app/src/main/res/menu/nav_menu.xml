@@ -19,4 +19,8 @@
         android:title="Credit"
 
         />
+    <item
+        android:id="@+id/theme_settings"
+        android:title="Theme Settings"
+        />
 </menu>
